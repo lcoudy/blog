@@ -33,7 +33,6 @@ git push -f origin master
 #D:\mrhelloworld\mrhelloworld_pure\public：需要上传的资源地址
 #oss://mrhelloworld：上传到哪个空间
 ossutil64.exe cp -r -u D:\Desktop\lyoul.top\public oss://lyoul-blog
+
 #  使用read命令达到类似bat中的pause命令效果
-echo 按任意键继续
-read -n 1
-echo 继续运行
+read -n 1 -p "Press any key to continue..."
