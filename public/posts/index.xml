@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>LYOUL&#39;s Blog</title>
-    <link>https://lyoul.top/</link>
-    <description>Recent content on LYOUL&#39;s Blog</description>
+    <title>Posts on LYOUL&#39;s Blog</title>
+    <link>https://lyoul.top/posts/</link>
+    <description>Recent content in Posts on LYOUL&#39;s Blog</description>
     <image>
       <url>https://lyoul.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://lyoul.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://lyoul.top/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="https://lyoul.top/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://lyoul.top/posts/%E5%AE%9E%E9%AA%8C1/</link>
@@ -18,7 +18,6 @@
       <guid>https://lyoul.top/posts/%E5%AE%9E%E9%AA%8C1/</guid>
       <description>信息系统一：中国大学生计算机设计大赛用户中心 （https://2022.jsjds.com.cn/User/panel#/） 中国大学生计算机设计大赛（简称“大赛”或4C）是我国高校面向本科生最早的赛事之一，自2008年开赛至2019年，一直由教育部高校与计算机相关教指委等或独立或</description>
     </item>
-    
     
   </channel>
 </rss>
