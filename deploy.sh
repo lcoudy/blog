@@ -20,7 +20,7 @@ if [ -n "$*" ]; then
 fi
 git commit -m "$msg"
 
-git pull --rebase origin master
+#git pull --rebase origin master
 # Push source and build repos.
 git push -f origin master
 
@@ -32,8 +32,8 @@ git push -f origin master
 #-u：更新操作。
 #D:\mrhelloworld\mrhelloworld_pure\public：需要上传的资源地址
 #oss://mrhelloworld：上传到哪个空间
-ossutil64.exe cp -r -u D:\Desktop\lyoul.top\public oss://lyoul-blog
+ossutil64.exe cp -r -u D:/Desktop/lyoul.top/public oss://lyoul-blog
 
 #  使用read命令达到类似bat中的pause命令效果
-#read -n 1 -p "Press any key to continue..."
-exec /bin/bash
+read -n 1 -p "Press any key to continue..."
+#exec /bin/bash
