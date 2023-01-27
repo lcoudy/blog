@@ -35,4 +35,5 @@ git push -f origin master
 ossutil64.exe cp -r -u D:\Desktop\lyoul.top\public oss://lyoul-blog
 
 #  使用read命令达到类似bat中的pause命令效果
-read -n 1 -p "Press any key to continue..."
+#read -n 1 -p "Press any key to continue..."
+exec /bin/bash
