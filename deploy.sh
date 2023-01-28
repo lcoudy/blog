@@ -8,7 +8,7 @@ set +e
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Build the project.
-Hugo  # if using a theme, replace with `Hugo -t <YOURTHEME>`
+hugo -F --cleanDestinationDir  # if using a theme, replace with `Hugo -t <YOURTHEME>`
 
 # Add changes to git.
 git add -A

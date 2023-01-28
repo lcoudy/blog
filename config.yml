@@ -8,7 +8,7 @@ enableEmoji: true # 允许使用 Emoji 表情，建议 true
 enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
 hasCJKLanguage: true # 自动检测是否包含 中文日文韩文 如果文章中使用了很多中文引号的话可以开启
 
-buildDrafts: false
+buildDrafts: true
 buildFuture: false
 buildExpired: false
 
@@ -18,9 +18,14 @@ googleAnalytics:  # 谷歌统计
 paginate: 5    # 首页每页显示的文章数
 summaryLength: 140 # 文章概览的自字数，默认70
 
-minify:
+minify: #缩小静态资源
   disableXML: true
-  minifyOutput: true
+  # minifyOutput: true
+
+permalinks: # 访问博客时网址的显示形式
+  post: "/:title/"
+  # post: "/:year/:month/:day/:title/"
+
 
 # 这里的参数会被代码以 .Site.Params 的形式读取
 params:
@@ -39,8 +44,8 @@ params:
 
   ShowReadingTime: true
   ShowShareButtons: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowPostNavLinks: true #在帖子下方显示上一个和下一个帖子
+  ShowBreadCrumbs: true #在单个帖子/页面上方显示面包屑导航
   ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
@@ -54,29 +59,30 @@ params:
   disableScrollToTop: false
   comments: false
   hidemeta: false
-  hideSummary: false
-  showtoc: false
-  tocopen: false
+  hideSummary: false #	隐藏列表页面中显示的摘要
+  showtoc: false #显示/隐藏目录
+  tocopen: true #在页面加载时默认保持打开 ToC
 
   assets:
-    disableHLJS: true # to disable highlight.js
-    disableFingerprinting: true
+    disableHLJS: true # 禁用 Highlight.js 加载
+    disableFingerprinting: true #禁用assets的Sub-Resource integrity
     favicon: "favicon/favicon.ico"
     favicon16x16: "favicon/favicon-16x16.png"
     favicon32x32: "favicon/favicon-32x32.png"
     apple_touch_icon: "favicon/apple-touch-icon.png"
     safari_pinned_tab: "favicon/safari-pinned-tab.svg"
 
+  #左上角
   label:
     text: "🏡 L Y O U L"
     #icon: /apple-touch-icon.png
     iconHeight: 35
 
-  # profile-mode
+  # 主页面
   profileMode:
     enabled: true # needs to be explicitly set
     title: L Y O U L
-    subtitle: ""
+    subtitle: "" #副标题
     imageUrl: "favicon/logo.jpg"
     imageWidth: 120
     imageHeight: 120
@@ -87,11 +93,6 @@ params:
       - name: 资源
         url: resource/
 
-  # home-info mode
-  #  homeInfoParams:
-  #    Title: "Hi there \U0001F44B"
-  #    Content: Welcome to my blog
-
   socialIcons:
     - name: github
       url: "https://github.com/lcoudy"
@@ -100,7 +101,7 @@ params:
     - name: telegram
       url: "https://t.me/L_Y_O_U_L"
 
-  analytics:
+  analytics: #站点验证标签
     google:
       SiteVerificationTag: "XYZabc"
     bing:
@@ -109,18 +110,18 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
-    responsiveImages: false
-    linkFullImages: false
+    hidden: true # 隐藏在任何地方但不在结构化数据中
+    hiddenInList: true # 隐藏在列表页面和主页上
+    hiddenInSingle: true # 隐藏在列表页面和主页上
+    responsiveImages: false #启用/禁用响应式封面图像的生成
+    linkFullImages: false #点击封面打开全尺寸封面图片
 
   editPost:
     URL: "https://github.com/lcoudy/blog"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
-  # 搜索设置
+  # 搜索页面设置
   # https://fusejs.io/api/options.html
   fuseOpts:
     isCaseSensitive: false
@@ -130,24 +131,25 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: [ "title", "permalink", "summary", "content" ]
+#首页菜单
 menu:
   main:
     - identifier: posts
       name: ✍文章
       url: /posts/
-      weight: 10
+      weight: 1
     - identifier: categories
       name: 📃类别
       url: /categories/
-      weight: 11
+      weight: 2
     - identifier: tags
-      name: 🏷️标签
-      url: /tags/
-      weight: 12
+      name: 🏷️归档
+      url: /archives/
+      weight: 3
     - identifier: search
       name: 🔍搜索
       url: /search/
-      weight: 13
+      weight: 4
 
 outputs:
   home:
@@ -159,20 +161,6 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
-# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
-# pygmentsUseClasses: true
-# markup:
-#     highlight:
-#         # anchorLineNos: true
-#         codeFences: true
-#         guessSyntax: true
-#         lineNos: true
-#         style: monokai
-
-#### 允许 html 渲染 start ####
-blackfriday:
-extensionsmask: [ "noIntraEmphasis" ]
-fractions: false
 
 markup:
     goldmark:
