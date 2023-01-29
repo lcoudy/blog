@@ -3,6 +3,7 @@ title: LYOUL's Blog
 languageCode: zh-cn # en-us
 theme: PaperMod
 
+
 enableInlineShortcodes: true
 enableEmoji: true # 允许使用 Emoji 表情，建议 true
 enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
@@ -143,7 +144,7 @@ menu:
       url: /categories/
       weight: 2
     - identifier: tags
-      name: 🏷️归档
+      name: 🏷️时间线
       url: /archives/
       weight: 3
     - identifier: search
