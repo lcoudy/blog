@@ -4,7 +4,7 @@ date: 2023-01-30T20:55:28+08:00 #创建时间
 lastmod: 2023-01-30T20:55:28+08:00 #更新时间
 author: ["LYOUL"] #作者
 categories: 
-- 分类1
+- Hugo
 ---
 
 ## Hugo和PaperMod
