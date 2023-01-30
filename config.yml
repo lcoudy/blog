@@ -89,10 +89,10 @@ params:
     imageHeight: 120
     imageTitle: my image
     buttons:
-      - name: 文章
+      - name: ✏️文章
         url: posts/
-      - name: 资源
-        url: resource/
+      - name: 📚阅读
+        url: read/
 
   socialIcons:
     - name: github
@@ -136,7 +136,7 @@ params:
 menu:
   main:
     - identifier: posts
-      name: ✍文章
+      name: ✏️文章
       url: /posts/
       weight: 1
     - identifier: categories
@@ -144,7 +144,7 @@ menu:
       url: /categories/
       weight: 2
     - identifier: tags
-      name: 🏷️时间线
+      name: 📁归档
       url: /archives/
       weight: 3
     - identifier: search

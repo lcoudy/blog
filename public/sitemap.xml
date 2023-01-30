@@ -30,6 +30,10 @@
     <loc>https://lyoul.top/about/</loc>
     <priority>0</priority>
   </url><url>
+    <loc>https://lyoul.top/read/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://lyoul.top/archives/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
