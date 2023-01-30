@@ -38,13 +38,13 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: [ "<link or path of image for opengraph, twitter-cards>" ]
   DateFormat: "2006-01-02"
-  defaultTheme: auto # dark, light
+  defaultTheme: light # auto , dark, light
   disableThemeToggle: false
   disablePWA: false
   disableBuSuanZi: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false # 显示分享按钮
   ShowPostNavLinks: true #在帖子下方显示上一个和下一个帖子
   ShowBreadCrumbs: true #在单个帖子/页面上方显示面包屑导航
   ShowCodeCopyButtons: true
@@ -117,10 +117,10 @@ params:
     responsiveImages: false #启用/禁用响应式封面图像的生成
     linkFullImages: false #点击封面打开全尺寸封面图片
 
-  editPost:
-    URL: "https://github.com/lcoudy/blog"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+#  editPost:
+#    URL: "https://github.com/lcoudy/blog"
+#    Text: "Suggest Changes" # edit text
+#    appendFilePath: true # to append file path to Edit link
 
   # 搜索页面设置
   # https://fusejs.io/api/options.html

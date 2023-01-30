@@ -3,36 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lyoul.top/posts/</loc>
-    <lastmod>2023-01-28T10:43:37+08:00</lastmod>
+    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lyoul.top/categories/</loc>
-    <lastmod>2023-01-28T10:43:37+08:00</lastmod>
+    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://lyoul.top/posts/lyoul/</loc>
-    <lastmod>2023-01-28T10:43:37+08:00</lastmod>
+    <loc>https://lyoul.top/posts/hugo&#43;papermod&#43;%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%BB%BA%E7%AB%99/</loc>
+    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lyoul.top/</loc>
-    <lastmod>2023-01-28T10:43:37+08:00</lastmod>
+    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://lyoul.top/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-01-28T10:43:37+08:00</lastmod>
+    <loc>https://lyoul.top/categories/%E5%88%86%E7%B1%BB1/</loc>
+    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lyoul.top/about/</loc>
     <priority>0</priority>
-  </url><url>
-    <loc>https://lyoul.top/posts/%E5%AE%9E%E9%AA%8C1/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://lyoul.top/archives/</loc>
     <changefreq>monthly</changefreq>
