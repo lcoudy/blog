@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Jan 2023 20:55:28 +0800</lastBuildDate><atom:link href="https://lyoul.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jan 2023 22:41:46 +0800</lastBuildDate><atom:link href="https://lyoul.top/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asds</title>
+      <link>https://lyoul.top/posts/asds/</link>
+      <pubDate>Mon, 30 Jan 2023 22:41:46 +0800</pubDate>
+      
+      <guid>https://lyoul.top/posts/asds/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hugo&#43;PaperMod&#43;阿里云OSS搭建网站</title>
       <link>https://lyoul.top/posts/hugo&#43;papermod&#43;%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%BB%BA%E7%AB%99/</link>
