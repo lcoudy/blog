@@ -10,22 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Jan 2023 22:41:46 +0800</lastBuildDate><atom:link href="https://lyoul.top/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Asds</title>
-      <link>https://lyoul.top/posts/asds/</link>
-      <pubDate>Mon, 30 Jan 2023 22:41:46 +0800</pubDate>
-      
-      <guid>https://lyoul.top/posts/asds/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Mon, 30 Jan 2023 20:55:28 +0800</lastBuildDate><atom:link href="https://lyoul.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>https://lyoul.top/posts/hugo/</link>
+      <link>https://lyoul.top/posts/%E5%BB%BA%E7%AB%99/</link>
       <pubDate>Mon, 30 Jan 2023 20:55:28 +0800</pubDate>
       
-      <guid>https://lyoul.top/posts/hugo/</guid>
+      <guid>https://lyoul.top/posts/%E5%BB%BA%E7%AB%99/</guid>
       <description>Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站， 搭建网站 结语 搭建个人网站=“折腾”</description>
     </item>
     
