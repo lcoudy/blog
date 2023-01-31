@@ -111,7 +111,7 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # 隐藏在任何地方但不在结构化数据中
+    hidden: false # 隐藏在任何地方但不在结构化数据中
     hiddenInList: true # 隐藏在列表页面和主页上
     hiddenInSingle: true # 隐藏在列表页面和主页上
     responsiveImages: false #启用/禁用响应式封面图像的生成

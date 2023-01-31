@@ -33,12 +33,12 @@
 <meta property="og:description" content="Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站， 搭建网站 结语 搭建个人网站=“折腾”" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyoul.top/posts/hugopapermodoss/" />
-<meta property="og:image" content="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/mstile-150x150.png" /><meta property="article:section" content="posts" />
+<meta property="og:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-30T20:55:28+08:00" />
 <meta property="article:modified_time" content="2023-01-30T20:55:28+08:00" /><meta property="og:site_name" content="LYOUL&#39;s Blog" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/mstile-150x150.png" />
+<meta name="twitter:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" />
 <meta name="twitter:title" content="Hugo&#43;PaperMod&#43;阿里云OSS搭建网站"/>
 <meta name="twitter:description" content="Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站， 搭建网站 结语 搭建个人网站=“折腾”"/>
 
@@ -76,7 +76,7 @@
   "articleBody": "Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站 结语 搭建个人网站=“折腾”\n",
   "wordCount" : "79",
   "inLanguage": "en",
-  "image":"https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/mstile-150x150.png","datePublished": "2023-01-30T20:55:28+08:00",
+  "image":"https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg","datePublished": "2023-01-30T20:55:28+08:00",
   "dateModified": "2023-01-30T20:55:28+08:00",
   "author":[{
     "@type": "Person",
@@ -168,32 +168,94 @@
     <div class="post-meta"><span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;79 words&nbsp;·&nbsp;LYOUL
 
 </div>
-  </header> <div class="toc">
-    <details  open>
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
+  </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+            <summary accesskey="c" title="(Alt + C)">
+                <span class="details">Table of Contents</span>
+            </summary>
 
-        <div class="inner"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#hugo和papermod">Hugo和PaperMod</a>
-      <ul>
-        <li><a href="#为什么选择hugo和papermod">为什么选择Hugo和PaperMod？</a></li>
-      </ul>
-    </li>
-    <li><a href="#阿里云oss">阿里云OSS</a></li>
-    <li><a href="#搭建网站">搭建网站</a></li>
-    <li><a href="#结语">结语</a></li>
-  </ul>
-</nav>
-        </div>
-    </details>
-</div>
+            <div class="inner"><ul>
+                    <li>
+                        <a href="#hugo%e5%92%8cpapermod" aria-label="Hugo和PaperMod">Hugo和PaperMod</a><ul>
+                            
+                    <li>
+                        <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9hugo%e5%92%8cpapermod" aria-label="为什么选择Hugo和PaperMod？">为什么选择Hugo和PaperMod？</a></li></ul>
+                    </li>
+                    <li>
+                        <a href="#%e9%98%bf%e9%87%8c%e4%ba%91oss" aria-label="阿里云OSS">阿里云OSS</a></li>
+                    <li>
+                        <a href="#%e6%90%ad%e5%bb%ba%e7%bd%91%e7%ab%99" aria-label="搭建网站">搭建网站</a></li>
+                    <li>
+                        <a href="#%e7%bb%93%e8%af%ad" aria-label="结语">结语</a>
+                    </li>
+                </ul>
+            </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
 
   <div class="post-content"><h2 id="hugo和papermod">Hugo和PaperMod<a hidden class="anchor" aria-hidden="true" href="#hugo和papermod">#</a></h2>
 <h3 id="为什么选择hugo和papermod">为什么选择Hugo和PaperMod？<a hidden class="anchor" aria-hidden="true" href="#为什么选择hugo和papermod">#</a></h3>
-<p><img loading="lazy" src="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/mstile-150x150.png" alt="mstile-150x150"  />
-</p>
 <h2 id="阿里云oss">阿里云OSS<a hidden class="anchor" aria-hidden="true" href="#阿里云oss">#</a></h2>
 <p>尝试过Hugo配合GitHub Pages来建站，</p>
 <h2 id="搭建网站">搭建网站<a hidden class="anchor" aria-hidden="true" href="#搭建网站">#</a></h2>
