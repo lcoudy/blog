@@ -21,48 +21,12 @@
   <h2 class="archive-year-header">
     {{- replace .Key "0001" "" }}年<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup>
   </h2>
-  {{- range .Pages.GroupByDate "January" }}
+  {{- range .Pages.GroupByDate "1" }}
   <div class="archive-month">
     <h3 class="archive-month-header">
-      {{- if eq .Key "December" }}
-      {{ "12月" }}
-      {{- end }}
-      {{- if eq .Key "November" }}
-      {{ "11月" }}
-      {{- end }}
-      {{- if eq .Key "October" }}
-      {{ "10月" }}
-      {{- end }}
-      {{- if eq .Key "September" }}
-      {{ "9月" }}
-      {{- end }}
-      {{- if eq .Key "August" }}
-      {{ "8月" }}
-      {{- end }}
-      {{- if eq .Key "July" }}
-      {{ "7月" }}
-      {{- end }}
-      {{- if eq .Key "June" }}
-      {{ "6月" }}
-      {{- end }}
-      {{- if eq .Key "May" }}
-      {{ "5月" }}
-      {{- end }}
-      {{- if eq .Key "April" }}
-      {{ "4月" }}
-      {{- end }}
-      {{- if eq .Key "March" }}
-      {{ "3月" }}
-      {{- end }}
-      {{- if eq .Key "February" }}
-      {{ "2月" }}
-      {{- end }}
-      {{- if eq .Key "January" }}
-      {{ "1月" }}
-      {{- end }}
-      <!-- {{- .Key }} -->
-      <sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}
-      </sup>
+      {{- .Key }}月<sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}</sup>
+<!--      <sup class="archive-count">&nbsp;&nbsp;{{ len .Pages }}-->
+<!--      </sup>-->
     </h3>
     <div class="archive-posts">
       {{- range .Pages }}

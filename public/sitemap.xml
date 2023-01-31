@@ -3,7 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://lyoul.top/posts/</loc>
-    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
+    <lastmod>2023-01-31T10:57:57+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lyoul.top/posts/asd/</loc>
+    <lastmod>2023-01-31T10:57:57+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lyoul.top/</loc>
+    <lastmod>2023-01-31T10:57:57+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -22,19 +32,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://lyoul.top/</loc>
-    <lastmod>2023-01-30T20:55:28+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://lyoul.top/about/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>https://lyoul.top/read/</loc>
+    <loc>https://lyoul.top/archives/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://lyoul.top/archives/</loc>
+    <loc>https://lyoul.top/read/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
