@@ -54,15 +54,13 @@ params:
   ShowLastMod: true #显示文章更新时间
   ShowToc: true # 显示目录
   TocOpen: true # 自动展开目录
-
   UseHugoToc: true
+
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
   hidemeta: false
   hideSummary: false #	隐藏列表页面中显示的摘要
-  showtoc: false #显示/隐藏目录
-  tocopen: true #在页面加载时默认保持打开 ToC
 
   assets:
     disableHLJS: true # 禁用 Highlight.js 加载

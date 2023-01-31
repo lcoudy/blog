@@ -4,12 +4,12 @@ date: {{ .Date }} #创建时间
 lastmod: {{ .Date }} #更新时间
 author: ["LYOUL"] #作者
 categories: 
-- 分类1
-- 分类2
+
 description: "" #描述
-weight:  # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
+comments: true #是否展示评论
 showToc: true # 显示目录
 TocOpen: true # 自动展开目录
 hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
@@ -20,5 +20,4 @@ cover:
     caption: "" #图片底部描述
     alt: ""
     relative: false
-# comments: true #是否展示评论
 ---

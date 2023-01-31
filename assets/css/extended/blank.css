@@ -23,7 +23,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     overflow: hidden;
     width: 100%;
 }
-
+/*end*/
 /*文章目录*/
 :root {
     --nav-width: 1380px;
@@ -111,3 +111,4 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .toc li a:hover {
     color: var(--secondary);
 }
+/*end*/
