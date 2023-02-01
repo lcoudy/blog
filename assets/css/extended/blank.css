@@ -24,3 +24,8 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     width: 100%;
 }
 /*end*/
+/*代码字体*/
+pre, code {
+    font-family:Hack,"JetBrains Mono", monospace;!important;
+}
+/*end*/

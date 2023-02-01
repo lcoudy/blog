@@ -171,6 +171,7 @@
 }
 
 .post-content .highlight pre {
+    background-color: var(--theme) !important;
     margin: 0;
 }
 
@@ -196,7 +197,7 @@
     padding: 4px 6px;
     font-size: 0.78em;
     line-height: 1.5;
-    background: var(--code-bg);
+    background: #f0f3f3; /*var(--code-bg);*/
     border-radius: 2px;
 }
 
