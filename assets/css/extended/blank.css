@@ -39,8 +39,11 @@ pre, code {
     background-color: var(--theme) !important;
     margin: 0;
 }
+
 /*代码块背景*/
-.article-content pre {
-  background-color: #000000;!important;
-  color: #000000;!important;
-}
+/*:root {*/
+/*    --hljs-bg: #ffffff;*/
+/*}*/
+/*.dark {*/
+/*    --hljs-bg: #ffffff;*/
+/*}*/
