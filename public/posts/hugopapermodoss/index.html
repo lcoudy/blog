@@ -7,14 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>Hugo&#43;PaperMod&#43;阿里云OSS搭建网站 | LYOUL&#39;s Blog</title>
 <meta name="keywords" content="">
-<meta name="description" content="import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站 结语 搭建个人网站=“折腾”
-Hugo&#43;PaperMod&#43;阿里云OSS搭建网站
-2023-01-30 · 1 min · 129 words · LYOUL
-Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1
-1 1 1 1 1 1dasdas 1
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123">
+<meta name="description" content=":root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，">
 <meta name="author" content="LYOUL">
 <link rel="canonical" href="https://lyoul.top/posts/hugopapermodoss/">
 <meta name="google-site-verification" content="XYZabc">
@@ -41,14 +34,7 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
 
 
 <meta property="og:title" content="Hugo&#43;PaperMod&#43;阿里云OSS搭建网站" />
-<meta property="og:description" content="import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站 结语 搭建个人网站=“折腾”
-Hugo&#43;PaperMod&#43;阿里云OSS搭建网站
-2023-01-30 · 1 min · 129 words · LYOUL
-Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1
-1 1 1 1 1 1dasdas 1
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123" />
+<meta property="og:description" content=":root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyoul.top/posts/hugopapermodoss/" />
 <meta property="og:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" /><meta property="article:section" content="posts" />
@@ -58,14 +44,7 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" />
 <meta name="twitter:title" content="Hugo&#43;PaperMod&#43;阿里云OSS搭建网站"/>
-<meta name="twitter:description" content="import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站 结语 搭建个人网站=“折腾”
-Hugo&#43;PaperMod&#43;阿里云OSS搭建网站
-2023-01-30 · 1 min · 129 words · LYOUL
-Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1
-1 1 1 1 1 1dasdas 1
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123"/>
+<meta name="twitter:description" content=":root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，"/>
 
 
 <script type="application/ld+json">
@@ -94,12 +73,12 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
   "@type": "BlogPosting",
   "headline": "Hugo+PaperMod+阿里云OSS搭建网站",
   "name": "Hugo\u002bPaperMod\u002b阿里云OSS搭建网站",
-  "description": "import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(\u0026#39;fibonacci_action_client\u0026#39;) self._action_client = ActionClient(self, Fibonacci, \u0026#39;fibonacci\u0026#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(\u0026#39;Goal rejected :(\u0026#39;) return self.get_logger().info(\u0026#39;Goal accepted :)\u0026#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(\u0026#39;Result: {0}\u0026#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(\u0026#39;Received feedback: {0}\u0026#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == \u0026#39;__main__\u0026#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站 结语 搭建个人网站=“折腾”\nHugo+PaperMod+阿里云OSS搭建网站\n2023-01-30 · 1 min · 129 words · LYOUL\nHugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1\n1 1 1 1 1 1dasdas 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123",
+  "description": ":root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(\u0026#39;fibonacci_action_client\u0026#39;) self._action_client = ActionClient(self, Fibonacci, \u0026#39;fibonacci\u0026#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(\u0026#39;Goal rejected :(\u0026#39;) return self.get_logger().info(\u0026#39;Goal accepted :)\u0026#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(\u0026#39;Result: {0}\u0026#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(\u0026#39;Received feedback: {0}\u0026#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == \u0026#39;__main__\u0026#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，",
   "keywords": [
     
   ],
-  "articleBody": " import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init('fibonacci_action_client') self._action_client = ActionClient(self, Fibonacci, 'fibonacci') def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info('Goal rejected :(') return self.get_logger().info('Goal accepted :)') self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info('Result: {0}'.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info('Received feedback: {0}'.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == '__main__': main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站 结语 搭建个人网站=“折腾”\nHugo+PaperMod+阿里云OSS搭建网站\n2023-01-30 · 1 min · 129 words · LYOUL\nHugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1\n1 1 1 1 1 1dasdas 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123\n",
-  "wordCount" : "166",
+  "articleBody": " :root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init('fibonacci_action_client') self._action_client = ActionClient(self, Fibonacci, 'fibonacci') def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info('Goal rejected :(') return self.get_logger().info('Goal accepted :)') self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info('Result: {0}'.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info('Received feedback: {0}'.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == '__main__': main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站 结语 搭建个人网站=“折腾”\nHugo+PaperMod+阿里云OSS搭建网站\n2023-01-30 · 1 min · 129 words · LYOUL\nHugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，\n搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1\n1 1 1 1 1 1dasdas 1\n1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123\n",
+  "wordCount" : "219",
   "inLanguage": "zh",
   "image":"https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg","datePublished": "2023-01-30T20:55:28+08:00",
   "dateModified": "2023-01-30T20:55:28+08:00",
@@ -200,7 +179,7 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
 
 
 
-<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;166字&nbsp;&nbsp;时长: 1分钟&nbsp;&nbsp;LYOUL
+<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;219字&nbsp;&nbsp;时长: 2分钟&nbsp;&nbsp;LYOUL
 
 </div>
   </header> <div class="toc">
@@ -235,57 +214,75 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
 
   <div class="post-content"><p><img loading="lazy" src="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/1k6ljv.jpg" alt="1k6ljv"  />
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">rclpy</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">rclpy.action</span> <span class="kn">import</span> <span class="n">ActionClient</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">action_tutorials_interfaces.action</span> <span class="kn">import</span> <span class="n">Fibonacci</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FibonacciActionClient</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="s1">&#39;fibonacci_action_client&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">_action_client</span> <span class="o">=</span> <span class="n">ActionClient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Fibonacci</span><span class="p">,</span> <span class="s1">&#39;fibonacci&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">send_goal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">goal_msg</span> <span class="o">=</span> <span class="n">Fibonacci</span><span class="o">.</span><span class="n">Goal</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">goal_msg</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">_action_client</span><span class="o">.</span><span class="n">wait_for_server</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">_send_goal_future</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_action_client</span><span class="o">.</span><span class="n">send_goal_async</span><span class="p">(</span><span class="n">goal_msg</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                                                                 <span class="n">feedback_callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">feedback_callback</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">_send_goal_future</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">goal_response_callback</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">goal_response_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">goal_handle</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">goal_handle</span><span class="o">.</span><span class="n">accepted</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Goal rejected :(&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Goal accepted :)&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">_get_result_future</span> <span class="o">=</span> <span class="n">goal_handle</span><span class="o">.</span><span class="n">get_result_async</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">_get_result_future</span><span class="o">.</span><span class="n">add_done_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_result_callback</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_result_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">future</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">future</span><span class="o">.</span><span class="n">result</span><span class="p">()</span><span class="o">.</span><span class="n">result</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Result: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">sequence</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">feedback_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feedback_msg</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">feedback</span> <span class="o">=</span> <span class="n">feedback_msg</span><span class="o">.</span><span class="n">feedback</span>
-</span></span><span class="line"><span class="cl">    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Received feedback: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feedback</span><span class="o">.</span><span class="n">partial_sequence</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">action_client</span> <span class="o">=</span> <span class="n">FibonacciActionClient</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="n">action_client</span><span class="o">.</span><span class="n">send_goal</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">action_client</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>:<span style="color:#ae81ff">root {</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--gap</span>: <span style="color:#ae81ff">24px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--content-gap</span>: <span style="color:#ae81ff">20px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--nav-width</span>: <span style="color:#ae81ff">1024px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--main-width</span>: <span style="color:#ae81ff">720px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--header-height</span>: <span style="color:#ae81ff">60px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--footer-height</span>: <span style="color:#ae81ff">60px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--radius</span>: <span style="color:#ae81ff">8px;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--theme</span>: <span style="color:#ae81ff">rgb(255, 255, 255);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--entry</span>: <span style="color:#ae81ff">rgb(255, 255, 255);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--primary</span>: <span style="color:#ae81ff">rgb(30, 30, 30);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--secondary</span>: <span style="color:#ae81ff">rgb(108, 108, 108);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--tertiary</span>: <span style="color:#ae81ff">rgb(214, 214, 214);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--content</span>: <span style="color:#ae81ff">rgb(31, 31, 31);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--hljs-bg</span>: <span style="color:#ae81ff">rgb(28, 29, 33);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--code-bg</span>: <span style="color:#ae81ff">rgb(245, 245, 245);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">--border</span>: <span style="color:#ae81ff">rgb(238, 238, 238);</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> rclpy
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> rclpy.action <span style="color:#f92672">import</span> ActionClient
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> rclpy.node <span style="color:#f92672">import</span> Node
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> action_tutorials_interfaces.action <span style="color:#f92672">import</span> Fibonacci
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FibonacciActionClient</span>(Node):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">init</span>(self):
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span>init(<span style="color:#e6db74">&#39;fibonacci_action_client&#39;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>_action_client <span style="color:#f92672">=</span> ActionClient(self, Fibonacci, <span style="color:#e6db74">&#39;fibonacci&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">send_goal</span>(self, order):
+</span></span><span style="display:flex;"><span>    goal_msg <span style="color:#f92672">=</span> Fibonacci<span style="color:#f92672">.</span>Goal()
+</span></span><span style="display:flex;"><span>    goal_msg<span style="color:#f92672">.</span>order <span style="color:#f92672">=</span> order
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>_action_client<span style="color:#f92672">.</span>wait_for_server()
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>_send_goal_future <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>_action_client<span style="color:#f92672">.</span>send_goal_async(goal_msg,
+</span></span><span style="display:flex;"><span>                                                                 feedback_callback<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>feedback_callback)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>_send_goal_future<span style="color:#f92672">.</span>add_done_callback(self<span style="color:#f92672">.</span>goal_response_callback)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">goal_response_callback</span>(self, future):
+</span></span><span style="display:flex;"><span>    goal_handle <span style="color:#f92672">=</span> future<span style="color:#f92672">.</span>result()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> goal_handle<span style="color:#f92672">.</span>accepted:
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>get_logger()<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Goal rejected :(&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>get_logger()<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Goal accepted :)&#39;</span>)
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>_get_result_future <span style="color:#f92672">=</span> goal_handle<span style="color:#f92672">.</span>get_result_async()
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>_get_result_future<span style="color:#f92672">.</span>add_done_callback(self<span style="color:#f92672">.</span>get_result_callback)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_result_callback</span>(self, future):
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> future<span style="color:#f92672">.</span>result()<span style="color:#f92672">.</span>result
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>get_logger()<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Result: </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(result<span style="color:#f92672">.</span>sequence))
+</span></span><span style="display:flex;"><span>    rclpy<span style="color:#f92672">.</span>shutdown()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">feedback_callback</span>(self, feedback_msg):
+</span></span><span style="display:flex;"><span>    feedback <span style="color:#f92672">=</span> feedback_msg<span style="color:#f92672">.</span>feedback
+</span></span><span style="display:flex;"><span>    self<span style="color:#f92672">.</span>get_logger()<span style="color:#f92672">.</span>info(<span style="color:#e6db74">&#39;Received feedback: </span><span style="color:#e6db74">{0}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format(feedback<span style="color:#f92672">.</span>partial_sequence))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>(args<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    rclpy<span style="color:#f92672">.</span>init(args<span style="color:#f92672">=</span>args)
+</span></span><span style="display:flex;"><span>    action_client <span style="color:#f92672">=</span> FibonacciActionClient()
+</span></span><span style="display:flex;"><span>    action_client<span style="color:#f92672">.</span>send_goal(<span style="color:#ae81ff">10</span>)
+</span></span><span style="display:flex;"><span>    rclpy<span style="color:#f92672">.</span>spin(action_client)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    main()
 </span></span></code></pre></div><h2 id="hugo和papermod">Hugo和PaperMod<a hidden class="anchor" aria-hidden="true" href="#hugo和papermod">#</a></h2>
 <h3 id="为什么选择hugo和papermod">为什么选择Hugo和PaperMod？<a hidden class="anchor" aria-hidden="true" href="#为什么选择hugo和papermod">#</a></h3>
 <h2 id="阿里云oss">阿里云OSS<a hidden class="anchor" aria-hidden="true" href="#阿里云oss">#</a></h2>
@@ -321,8 +318,8 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
-
-
+        
+        
     </span>
     <br>
     <span>
@@ -331,10 +328,23 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
+    <span class="topInner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
 </a>
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
 
 <script>
     let menu = document.getElementById('menu')
@@ -399,7 +409,7 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
         copybutton.innerHTML = '复制';
 
         function copyingDone() {
-            copybutton.innerHTML = '已复制👌';
+            copybutton.innerHTML = '已复制';
             setTimeout(() => {
                 copybutton.innerHTML = '复制';
             }, 2000);
@@ -420,7 +430,9 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
             try {
                 document.execCommand('copy');
                 copyingDone();
-            } catch (e) { };
+            } catch (e) {
+            }
+            ;
             selection.removeRange(range);
         });
 

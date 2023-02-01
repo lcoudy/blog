@@ -182,7 +182,7 @@
 
 
 
-<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;166字&nbsp;&nbsp;时长: 1分钟&nbsp;&nbsp;LYOUL</div>
+<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;219字&nbsp;&nbsp;时长: 2分钟&nbsp;&nbsp;LYOUL</div>
         <a class="entry-link" aria-label="post link to Hugo&#43;PaperMod&#43;阿里云OSS搭建网站" href="https://lyoul.top/posts/hugopapermodoss/"></a>
       </div>
     </div>
@@ -195,8 +195,8 @@
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
-
-
+        
+        
     </span>
     <br>
     <span>
@@ -205,10 +205,23 @@
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
+    <span class="topInner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
 </a>
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
 
 <script>
     let menu = document.getElementById('menu')

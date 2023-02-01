@@ -41,9 +41,36 @@ pre, code {
 }
 
 /*代码块背景*/
-/*:root {*/
-/*    --hljs-bg: #ffffff;*/
-/*}*/
-/*.dark {*/
-/*    --hljs-bg: #ffffff;*/
-/*}*/
+:root {
+    --hljs-bg: #282C34;
+}
+.dark {
+    --hljs-bg: #1c1c1c;
+}
+
+
+/*图片点击放大*/
+img:active {
+    transform: scale(1.25, 1.25);
+    opacity: 1;
+    z-index: 999;
+    border: 1px solid var(--border);
+}
+
+/*一键置顶显示阅读进度*/
+.topInner {
+    display: grid;
+    align-items: baseline;
+    justify-items: center;
+    margin: 9px;
+    font-weight: 900;
+}
+
+.topSvg {
+    width: 20px;
+}
+
+.top-link {
+    padding: unset;
+}
+

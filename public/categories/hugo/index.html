@@ -129,14 +129,7 @@
             </h2>
         </header>
         <div class="entry-content">
-            <p>import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站 结语 搭建个人网站=“折腾”
-Hugo&#43;PaperMod&#43;阿里云OSS搭建网站
-2023-01-30 · 1 min · 129 words · LYOUL
-Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，
-搭建网站# 结语 搭建个人网站=“折腾” 1 1 1 1 1
-1 1 1 1 1 1dasdas 1
-1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 asfas asfasf asf asf 1 123 1 32 13 21 321 3 12 #3 23 12 32 123 32123</p>
+            <p>:root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，...</p>
         </div>
         <footer class="entry-footer">
 
@@ -148,7 +141,7 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
 
 
 
-<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;166字&nbsp;&nbsp;时长: 1分钟&nbsp;&nbsp;LYOUL</footer>
+<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;219字&nbsp;&nbsp;时长: 2分钟&nbsp;&nbsp;LYOUL</footer>
     </div>   
 <figure class="entry-cover"><img loading="lazy" src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" alt="">
 </figure>
@@ -161,8 +154,8 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
-
-
+        
+        
     </span>
     <br>
     <span>
@@ -171,10 +164,23 @@ Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配�
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
+    <span class="topInner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
 </a>
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
 
 <script>
     let menu = document.getElementById('menu')
