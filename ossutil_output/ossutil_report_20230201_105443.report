@@ -1,0 +1,1 @@
+# D:\System\ossutil64\ossutil64.exe sync -u -f --force public/ oss://lyoul-blog --delete
