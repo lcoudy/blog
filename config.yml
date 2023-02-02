@@ -21,171 +21,175 @@ paginate: 5    # 首页每页显示的文章数
 summaryLength: 140 # 文章概览的自字数，默认70
 
 minify: #缩小静态资源
-  disableXML: true
-  # minifyOutput: true
+    disableXML: true
+    # minifyOutput: true
 
 permalinks: # 访问博客时网址的显示形式
-  post: "/:title/"
-  # post: "/:year/:month/:day/:title/"
+    post: "/:title/"
+    # post: "/:year/:month/:day/:title/"
 
 
 # 这里的参数会被代码以 .Site.Params 的形式读取
 params:
-  beian: "豫 ICP备2023001169号-1" # 备案信息
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: LYOUL's Blog
-  description: ""
-  keywords: [ LYOUL,Blog ]
-  author: LYOUL
-  # author: ["Me", "You"] # multiple authors
-  images: [ "<link or path of image for opengraph, twitter-cards>" ]
-  DateFormat: "2006-01-02"
-  defaultTheme: light # auto , dark, light
-  disableThemeToggle: false
-  disablePWA: false
-  disableBuSuanZi: false
+    beian: "豫 ICP备2023001169号-1" # 备案信息
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: LYOUL's Blog
+    description: ""
+    keywords: [ LYOUL,Blog ]
+    author: LYOUL
+    # author: ["Me", "You"] # multiple authors
+    images: [ "<link or path of image for opengraph, twitter-cards>" ]
+    DateFormat: "2006-01-02"
+    defaultTheme: light # auto , dark, light
+    disableThemeToggle: false
+    disablePWA: false
+    disableBuSuanZi: false
 
-  ShowWordCounts: true
-  ShowReadingTime: true
-  ShowShareButtons: false # 显示分享按钮
-  ShowPostNavLinks: true #在帖子下方显示上一个和下一个帖子
-  ShowBreadCrumbs: true #在单个帖子/页面上方显示面包屑导航
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  hideFooter: false # 隐藏页脚
-  ShowLastMod: false #显示文章更新时间
-  ShowToc: true # 显示目录
-  TocOpen: true # 自动展开目录
-  UseHugoToc: true
+    ShowWordCounts: true
+    ShowReadingTime: true
+    ShowShareButtons: false # 显示分享按钮
+    ShowPostNavLinks: true #在帖子下方显示上一个和下一个帖子
+    ShowBreadCrumbs: true #在单个帖子/页面上方显示面包屑导航
+    ShowCodeCopyButtons: true
+    ShowWordCount: true
+    ShowRssButtonInSectionTermList: true
+    hideFooter: false # 隐藏页脚
+    ShowLastMod: false #显示文章更新时间
+    ShowToc: true # 显示目录
+    TocOpen: true # 自动展开目录
+    UseHugoToc: true
 
-  disableSpecial1stPost: false
-  disableScrollToTop: false
-  comments: false
-  hidemeta: false
-  hideSummary: false #	隐藏列表页面中显示的摘要
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false #	隐藏列表页面中显示的摘要
+    
+    # 静态资源
+    assets:
+        disableHLJS: false # 禁用 Highlight.js 加载
+        disableFingerprinting: true #禁用assets的Sub-Resource integrity
+        favicon: "favicon/favicon.ico"
+        favicon16x16: "favicon/favicon-16x16.png"
+        favicon32x32: "favicon/favicon-32x32.png"
+        apple_touch_icon: "favicon/apple-touch-icon.png"
+        safari_pinned_tab: "favicon/safari-pinned-tab.svg"
 
-  assets:
-    disableHLJS: true # 禁用 Highlight.js 加载
-    disableFingerprinting: true #禁用assets的Sub-Resource integrity
-    favicon: "favicon/favicon.ico"
-    favicon16x16: "favicon/favicon-16x16.png"
-    favicon32x32: "favicon/favicon-32x32.png"
-    apple_touch_icon: "favicon/apple-touch-icon.png"
-    safari_pinned_tab: "favicon/safari-pinned-tab.svg"
+    #左上角
+    label:
+        text: "🏡 L Y O U L"
+        #icon: /apple-touch-icon.png
+        iconHeight: 35
 
-  #左上角
-  label:
-    text: "🏡 L Y O U L"
-    #icon: /apple-touch-icon.png
-    iconHeight: 35
+    # 主页面
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: L Y O U L
+        subtitle: "" #副标题
+        imageUrl: "favicon/logo.jpg"
+        imageWidth: 120
+        imageHeight: 120
+        imageTitle: my image
+        buttons:
+            -   name: ✏️文章
+                url: posts/
+            -   name: 📚阅读
+                url: read/
 
-  # 主页面
-  profileMode:
-    enabled: true # needs to be explicitly set
-    title: L Y O U L
-    subtitle: "" #副标题
-    imageUrl: "favicon/logo.jpg"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: ✏️文章
-        url: posts/
-      - name: 📚阅读
-        url: read/
+    # 社交图标
+    socialIcons:
+        -   name: github
+            url: "https://github.com/lcoudy"
+        -   name: email
+            url: "mailto:1020246530lyoul@Gmail.com"
+        -   name: telegram
+            url: "https://t.me/L_Y_O_U_L"
 
-  socialIcons:
-    - name: github
-      url: "https://github.com/lcoudy"
-    - name: email
-      url: "mailto:1020246530lyoul@Gmail.com"
-    - name: telegram
-      url: "https://t.me/L_Y_O_U_L"
+    #站点验证标签
+    analytics:
+        google:
+            SiteVerificationTag: "XYZabc"
+        bing:
+            SiteVerificationTag: "XYZabc"
+        yandex:
+            SiteVerificationTag: "XYZabc"
 
-  analytics: #站点验证标签
-    google:
-      SiteVerificationTag: "XYZabc"
-    bing:
-      SiteVerificationTag: "XYZabc"
-    yandex:
-      SiteVerificationTag: "XYZabc"
+    #文章封面
+    cover:
+        hidden: false # 隐藏在任何地方但不在结构化数据中
+        hiddenInList: true # 隐藏在列表页面和主页上
+        hiddenInSingle: true # 隐藏在列表页面和主页上
+        responsiveImages: false #启用/禁用响应式封面图像的生成
+        linkFullImages: false #点击封面打开全尺寸封面图片
 
-  cover:
-    hidden: false # 隐藏在任何地方但不在结构化数据中
-    hiddenInList: true # 隐藏在列表页面和主页上
-    hiddenInSingle: true # 隐藏在列表页面和主页上
-    responsiveImages: false #启用/禁用响应式封面图像的生成
-    linkFullImages: false #点击封面打开全尺寸封面图片
+    #  editPost:
+    #    URL: "https://github.com/lcoudy/blog"
+    #    Text: "Suggest Changes" # edit text
+    #    appendFilePath: true # to append file path to Edit link
 
-  #  editPost:
-  #    URL: "https://github.com/lcoudy/blog"
-  #    Text: "Suggest Changes" # edit text
-  #    appendFilePath: true # to append file path to Edit link
-
-  # 搜索页面设置
-  # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    keys: [ "title", "permalink", "summary", "content" ]
+    # 搜索页面设置
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: [ "title", "permalink", "summary", "content" ]
 
 #首页菜单
 menu:
-  main:
-    - identifier: posts
-      name: ✏️文章
-      url: /posts/
-      weight: 1
-    - identifier: categories
-      name: 📃类别
-      url: /categories/
-      weight: 2
-    - identifier: tags
-      name: 📁归档
-      url: /archives/
-      weight: 3
-    - identifier: search
-      name: 🔍搜索
-      url: /search/
-      weight: 4
+    main:
+        -   identifier: posts
+            name: ✏️文章
+            url: /posts/
+            weight: 1
+        -   identifier: categories
+            name: 📃类别
+            url: /categories/
+            weight: 2
+        -   identifier: tags
+            name: 📁归档
+            url: /archives/
+            weight: 3
+        -   identifier: search
+            name: 🔍搜索
+            url: /search/
+            weight: 4
 
 outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON # is necessary
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
 
 sitemap:
-  changefreq: monthly
-  filename: sitemap.xml
-  priority: 0.5
+    changefreq: monthly
+    filename: sitemap.xml
+    priority: 0.5
 
 markup:
-  goldmark:
-    renderer:
-      unsafe: true # HUGO 默认转义 Markdown 文件中的 HTML 代码，如需开启的话
-  highlight:
-    anchorLineNos: false
-    codeFences: true
-    guessSyntax: true
-    lineNos: false
-    noClasses: true
-    #style: monokai  #"manni" # darcula
+    goldmark:
+        renderer:
+            unsafe: true # HUGO 默认转义 Markdown 文件中的 HTML 代码，如需开启的话
+    highlight:
+        anchorLineNos: false
+        codeFences: true
+        guessSyntax: true
+        lineNos: false
+        noClasses: true
+        #style: "manni" # darcula
 
-    # codeFences：代码围栏功能，这个功能一般都要设为 true 的，不然很难看，就是干巴巴的-代码文字，没有颜色。
-    # guessSyntax：猜测语法，这个功能建议设置为 true, 如果你没有设置要显示的语言则会自动匹配。
-    # hl_Lines：高亮的行号，一般这个不设置，因为每个代码块我们可能希望让高亮的地方不一样。
-    # lineNoStart：行号从编号几开始，一般从 1 开始。
-    # lineNos：是否显示行号，我比较喜欢显示，所以我设置的为 true.
-    # lineNumbersInTable：使用表来格式化行号和代码,而不是 标签。这个属性一般设置为 true.
-    # noClasses：使用 class 标签，而不是内嵌的内联样式
+        # codeFences：代码围栏功能，这个功能一般都要设为 true 的，不然很难看，就是干巴巴的-代码文字，没有颜色。
+        # guessSyntax：猜测语法，这个功能建议设置为 true, 如果你没有设置要显示的语言则会自动匹配。
+        # hl_Lines：高亮的行号，一般这个不设置，因为每个代码块我们可能希望让高亮的地方不一样。
+        # lineNoStart：行号从编号几开始，一般从 1 开始。
+        # lineNos：是否显示行号，我比较喜欢显示，所以我设置的为 true.
+        # lineNumbersInTable：使用表来格式化行号和代码,而不是 标签。这个属性一般设置为 true.
+        # noClasses：使用 class 标签，而不是内嵌的内联样式
 
 privacy:
-  vimeo:
-    disabled: false
-    simple: true
+    vimeo:
+        disabled: false
+        simple: true
