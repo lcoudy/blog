@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="https://kit.fontawesome.com/9d882861ab.js" crossorigin="anonymous"></script>
+<title>个人博客搭建历程 | LYOUL&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="起 为什么要搭建个人博客？(因为闲)
+就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。
+我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。
+虽然很多很多Hugo网站搭配Github Pages做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。
+Hugo和PaperMod Hugo的官网上写着“The world’s fastest framework for building websites”，事实也确实如此。
+在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。
+我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。
+蚊BloG https://mozz.ie/ ChrAlpha&rsquo;s Blog https://blog.ichr.me/ 闪烁之狐 http://blinkfox.com/ Hugo Theme Stack Starter https://demo.stack.jimmycai.com/ Hexo Theme Fluid https://hexo.fluid-dev.com/ TransitiveBullsh.it https://transitivebullsh.it/ 首页 | Sukka&rsquo;s Blog https://blog.skk.moe/ Yi&rsquo;s Knowledge Base - Yi&rsquo;s Knowledge Base https://www.y1zhou.com/ Frytea https://www.frytea.com/
+让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。
+其次就是Frytea的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。
+准备工作 阿里云OSS 阿里云对象存储OSS的开通
+创建存储空间
+申请域名 阿里云域名注册流程
+搭建网站 安装Hugo 安装PaperMod 网站发布 结语 搭建个人网站≈“折腾”">
+<meta name="author" content="LYOUL">
+<link rel="canonical" href="https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lyoul.top/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lyoul.top/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lyoul.top/favicon/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lyoul.top/favicon/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lyoul.top/favicon/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+
+
+<meta property="og:title" content="个人博客搭建历程" />
+<meta property="og:description" content="起 为什么要搭建个人博客？(因为闲)
+就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。
+我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。
+虽然很多很多Hugo网站搭配Github Pages做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。
+Hugo和PaperMod Hugo的官网上写着“The world’s fastest framework for building websites”，事实也确实如此。
+在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。
+我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。
+蚊BloG https://mozz.ie/ ChrAlpha&rsquo;s Blog https://blog.ichr.me/ 闪烁之狐 http://blinkfox.com/ Hugo Theme Stack Starter https://demo.stack.jimmycai.com/ Hexo Theme Fluid https://hexo.fluid-dev.com/ TransitiveBullsh.it https://transitivebullsh.it/ 首页 | Sukka&rsquo;s Blog https://blog.skk.moe/ Yi&rsquo;s Knowledge Base - Yi&rsquo;s Knowledge Base https://www.y1zhou.com/ Frytea https://www.frytea.com/
+让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。
+其次就是Frytea的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。
+准备工作 阿里云OSS 阿里云对象存储OSS的开通
+创建存储空间
+申请域名 阿里云域名注册流程
+搭建网站 安装Hugo 安装PaperMod 网站发布 结语 搭建个人网站≈“折腾”" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/" />
+<meta property="og:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-30T20:55:28+08:00" />
+<meta property="article:modified_time" content="2023-01-30T20:55:28+08:00" /><meta property="og:site_name" content="LYOUL&#39;s Blog" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" />
+<meta name="twitter:title" content="个人博客搭建历程"/>
+<meta name="twitter:description" content="起 为什么要搭建个人博客？(因为闲)
+就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。
+我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。
+虽然很多很多Hugo网站搭配Github Pages做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。
+Hugo和PaperMod Hugo的官网上写着“The world’s fastest framework for building websites”，事实也确实如此。
+在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。
+我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。
+蚊BloG https://mozz.ie/ ChrAlpha&rsquo;s Blog https://blog.ichr.me/ 闪烁之狐 http://blinkfox.com/ Hugo Theme Stack Starter https://demo.stack.jimmycai.com/ Hexo Theme Fluid https://hexo.fluid-dev.com/ TransitiveBullsh.it https://transitivebullsh.it/ 首页 | Sukka&rsquo;s Blog https://blog.skk.moe/ Yi&rsquo;s Knowledge Base - Yi&rsquo;s Knowledge Base https://www.y1zhou.com/ Frytea https://www.frytea.com/
+让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。
+其次就是Frytea的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。
+准备工作 阿里云OSS 阿里云对象存储OSS的开通
+创建存储空间
+申请域名 阿里云域名注册流程
+搭建网站 安装Hugo 安装PaperMod 网站发布 结语 搭建个人网站≈“折腾”"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "✏️文章",
+      "item": "https://lyoul.top/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "个人博客搭建历程",
+      "item": "https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "个人博客搭建历程",
+  "name": "个人博客搭建历程",
+  "description": "起 为什么要搭建个人博客？(因为闲)\n就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。\n我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。\n虽然很多很多Hugo网站搭配Github Pages做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。\nHugo和PaperMod Hugo的官网上写着“The world’s fastest framework for building websites”，事实也确实如此。\n在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。\n我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。\n蚊BloG https://mozz.ie/ ChrAlpha\u0026rsquo;s Blog https://blog.ichr.me/ 闪烁之狐 http://blinkfox.com/ Hugo Theme Stack Starter https://demo.stack.jimmycai.com/ Hexo Theme Fluid https://hexo.fluid-dev.com/ TransitiveBullsh.it https://transitivebullsh.it/ 首页 | Sukka\u0026rsquo;s Blog https://blog.skk.moe/ Yi\u0026rsquo;s Knowledge Base - Yi\u0026rsquo;s Knowledge Base https://www.y1zhou.com/ Frytea https://www.frytea.com/\n让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。\n其次就是Frytea的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。\n准备工作 阿里云OSS 阿里云对象存储OSS的开通\n创建存储空间\n申请域名 阿里云域名注册流程\n搭建网站 安装Hugo 安装PaperMod 网站发布 结语 搭建个人网站≈“折腾”",
+  "keywords": [
+    
+  ],
+  "articleBody": " 起 为什么要搭建个人博客？(因为闲)\n就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。\n我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。\n虽然很多很多Hugo网站搭配Github Pages做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。\nHugo和PaperMod Hugo的官网上写着“The world’s fastest framework for building websites”，事实也确实如此。\n在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。\n我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。\n蚊BloG https://mozz.ie/ ChrAlpha’s Blog https://blog.ichr.me/ 闪烁之狐 http://blinkfox.com/ Hugo Theme Stack Starter https://demo.stack.jimmycai.com/ Hexo Theme Fluid https://hexo.fluid-dev.com/ TransitiveBullsh.it https://transitivebullsh.it/ 首页 | Sukka’s Blog https://blog.skk.moe/ Yi’s Knowledge Base - Yi’s Knowledge Base https://www.y1zhou.com/ Frytea https://www.frytea.com/\n让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。\n其次就是Frytea的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。\n准备工作 阿里云OSS 阿里云对象存储OSS的开通\n创建存储空间\n申请域名 阿里云域名注册流程\n搭建网站 安装Hugo 安装PaperMod 网站发布 结语 搭建个人网站≈“折腾”\n",
+  "wordCount" : "64",
+  "inLanguage": "zh",
+  "image":"https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg","datePublished": "2023-01-30T20:55:28+08:00",
+  "dateModified": "2023-01-30T20:55:28+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "LYOUL"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LYOUL's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lyoul.top/favicon/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lyoul.top/" accesskey="h" title="🏡 L Y O U L (Alt + H)">🏡 L Y O U L</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lyoul.top/posts/" title="✏️文章">
+                    <span>✏️文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lyoul.top/categories/" title="📃类别">
+                    <span>📃类别</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lyoul.top/archives/" title="📁归档">
+                    <span>📁归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lyoul.top/search/" title="🔍搜索 (Alt &#43; /)" accesskey=/>
+                    <span>🔍搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://lyoul.top/">🏡 L Y O U L</a>&nbsp;»&nbsp;<a href="https://lyoul.top/posts/">✏️文章</a></div>
+    <h1 class="post-title">
+      个人博客搭建历程
+    </h1>
+    <div class="post-meta">
+
+
+
+
+
+
+
+
+
+
+<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;64字&nbsp;&nbsp;时长: 1分钟&nbsp;&nbsp;LYOUL&nbsp;&nbsp;访问量：<span id="busuanzi_value_page_pv"></span>
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">文章目录</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#起">起</a></li>
+    <li><a href="#hugo和papermod">Hugo和PaperMod</a></li>
+    <li><a href="#准备工作">准备工作</a>
+      <ul>
+        <li><a href="#阿里云oss">阿里云OSS</a></li>
+        <li><a href="#申请域名">申请域名</a></li>
+      </ul>
+    </li>
+    <li><a href="#搭建网站">搭建网站</a>
+      <ul>
+        <li><a href="#安装hugo">安装Hugo</a></li>
+        <li><a href="#安装papermod">安装PaperMod</a></li>
+      </ul>
+    </li>
+    <li><a href="#网站发布">网站发布</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p><img loading="lazy" src="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/1k6ljv.jpg" alt="1k6ljv"  />
+</p>
+<h2 id="起">起<a hidden class="anchor" aria-hidden="true" href="#起">#</a></h2>
+<p>为什么要搭建个人博客？(因为<del>闲</del>)</p>
+<p>就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。</p>
+<p>我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。</p>
+<p>虽然很多很多Hugo网站搭配<a href="https://docs.github.com/zh/pages/getting-started-with-github-pages">Github Pages</a>做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。</p>
+<h2 id="hugo和papermod">Hugo和PaperMod<a hidden class="anchor" aria-hidden="true" href="#hugo和papermod">#</a></h2>
+<p>Hugo的<a href="https://gohugo.io/">官网</a>上写着“The world’s fastest framework for building websites”，事实也确实如此。</p>
+<p><img loading="lazy" src="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/image-20230208233549276.png" alt="image-20230208233549276"  />
+</p>
+<p>在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。</p>
+<p>我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。</p>
+<blockquote>
+<p>蚊BloG
+<a href="https://mozz.ie/">https://mozz.ie/</a>
+ChrAlpha&rsquo;s Blog
+<a href="https://blog.ichr.me/">https://blog.ichr.me/</a>
+闪烁之狐
+<a href="http://blinkfox.com/">http://blinkfox.com/</a>
+Hugo Theme Stack Starter
+<a href="https://demo.stack.jimmycai.com/">https://demo.stack.jimmycai.com/</a>
+Hexo Theme Fluid
+<a href="https://hexo.fluid-dev.com/">https://hexo.fluid-dev.com/</a>
+TransitiveBullsh.it
+<a href="https://transitivebullsh.it/">https://transitivebullsh.it/</a>
+首页 | Sukka&rsquo;s Blog
+<a href="https://blog.skk.moe/">https://blog.skk.moe/</a>
+Yi&rsquo;s Knowledge Base - Yi&rsquo;s Knowledge Base
+<a href="https://www.y1zhou.com/">https://www.y1zhou.com/</a>
+Frytea
+<a href="https://www.frytea.com/">https://www.frytea.com/</a></p>
+</blockquote>
+<p>让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。</p>
+<p>其次就是<a href="https://www.frytea.com/">Frytea</a>的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。</p>
+<p><img loading="lazy" src="https://lyoul-markdown.oss-cn-hangzhou.aliyuncs.com/Markdown/2023-02-08_23-34-19.png" alt="Frytea网站截图"  />
+</p>
+<h2 id="准备工作">准备工作<a hidden class="anchor" aria-hidden="true" href="#准备工作">#</a></h2>
+<h3 id="阿里云oss">阿里云OSS<a hidden class="anchor" aria-hidden="true" href="#阿里云oss">#</a></h3>
+<p><a href="https://blog.csdn.net/m0_46275020/article/details/106130463">阿里云对象存储OSS的开通</a></p>
+<p><a href="https://help.aliyun.com/document_detail/31885.htm?spm=a2c4g.11186623.0.0.27736d54Xxuvz0#task-u3p-3n4-tdb">创建存储空间</a></p>
+<h3 id="申请域名">申请域名<a hidden class="anchor" aria-hidden="true" href="#申请域名">#</a></h3>
+<p><a href="https://zhuanlan.zhihu.com/p/586766866#:~:text=%E9%98%BF%E9%87%8C%E4%BA%91%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%201%20%E4%B8%80%EF%BC%9A%E6%B3%A8%E5%86%8C%E9%98%BF%E9%87%8C%E4%BA%91%E8%B4%A6%E5%8F%B7%E5%B9%B6%E5%AE%8C%E6%88%90%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%202,%E4%BA%8C%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF%E6%A8%A1%E7%89%88%203%20%E4%B8%89%EF%BC%9A%E5%9F%9F%E5%90%8D%E5%90%8D%E7%A7%B0%E5%8F%8A%E5%9F%9F%E5%90%8D%E5%90%8E%E7%BC%80%E7%9A%84%E9%80%89%E6%8B%A9%204%20%E5%9B%9B%EF%BC%9A%E6%9F%A5%E8%AF%A2%E5%B9%B6%E6%B3%A8%E5%86%8C%E5%9F%9F%E5%90%8D">阿里云域名注册流程</a></p>
+<h2 id="搭建网站">搭建网站<a hidden class="anchor" aria-hidden="true" href="#搭建网站">#</a></h2>
+<h3 id="安装hugo">安装Hugo<a hidden class="anchor" aria-hidden="true" href="#安装hugo">#</a></h3>
+<h3 id="安装papermod">安装PaperMod<a hidden class="anchor" aria-hidden="true" href="#安装papermod">#</a></h3>
+<h2 id="网站发布">网站发布<a hidden class="anchor" aria-hidden="true" href="#网站发布">#</a></h2>
+<h2 id="结语">结语<a hidden class="anchor" aria-hidden="true" href="#结语">#</a></h2>
+<p>搭建个人网站≈“折腾”</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://lyoul.top/">LYOUL</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
+        
+        
+    </span>
+    <br>
+    <span>
+        <a href="/about" rel="noopener noreferrer" target="_blank">关于</a> &
+        <a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">豫 ICP备2023001169号-1</a>
+        总访客：<span id="busuanzi_value_site_uv"></span>
+        总浏览量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {
+            }
+            ;
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

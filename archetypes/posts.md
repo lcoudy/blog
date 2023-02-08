@@ -8,9 +8,6 @@ showToc: true # 显示目录
 TocOpen: true # 自动展开目录
 cover:
     image: "" #图片路径
-    caption: "" #图片底部描述
-    alt: ""
-    relative: false
-categories: 
+categories:
 
 ---

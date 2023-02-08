@@ -7,14 +7,13 @@
 <meta name="robots" content="index, follow">
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="https://kit.fontawesome.com/9d882861ab.js" crossorigin="anonymous"></script>
 <title>Hugo | LYOUL&#39;s Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="LYOUL">
 <link rel="canonical" href="https://lyoul.top/categories/hugo/">
-<meta name="google-site-verification" content="XYZabc">
-<meta name="yandex-verification" content="XYZabc">
-<meta name="msvalidate.01" content="XYZabc">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lyoul.top/favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lyoul.top/favicon/favicon-16x16.png">
@@ -112,26 +111,30 @@
 <header class="page-header"><div class="breadcrumbs"><a href="https://lyoul.top/">🏡 L Y O U L</a>&nbsp;»&nbsp;<a href="https://lyoul.top/categories/">📃类别</a></div>
     <h1>
         Hugo
-        <a href="index.xml" title="RSS" aria-label="RSS">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2"
-                 stroke-linecap="round" stroke-linejoin="round" height="23">
-                <path d="M4 11a9 9 0 0 1 9 9"/>
-                <path d="M4 4a16 16 0 0 1 16 16"/>
-                <circle cx="5" cy="19" r="1"/>
-            </svg>
-        </a>
     </h1>
 </header>
 
 <article class="post-entry tag-entry">
     <div class="post-info">  
         <header class="entry-header">
-            <h2>Hugo&#43;PaperMod&#43;阿里云OSS搭建网站
+            <h2>个人博客搭建历程
             </h2>
         </header>
         <div class="entry-content">
-            <p>:root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --content: rgb(31, 31, 31); --hljs-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); } import rclpy from rclpy.action import ActionClient from rclpy.node import Node from action_tutorials_interfaces.action import Fibonacci class FibonacciActionClient(Node): def init(self): super().init(&#39;fibonacci_action_client&#39;) self._action_client = ActionClient(self, Fibonacci, &#39;fibonacci&#39;) def send_goal(self, order): goal_msg = Fibonacci.Goal() goal_msg.order = order self._action_client.wait_for_server() self._send_goal_future = self._action_client.send_goal_async(goal_msg, feedback_callback=self.feedback_callback) self._send_goal_future.add_done_callback(self.goal_response_callback) def goal_response_callback(self, future): goal_handle = future.result() if not goal_handle.accepted: self.get_logger().info(&#39;Goal rejected :(&#39;) return self.get_logger().info(&#39;Goal accepted :)&#39;) self._get_result_future = goal_handle.get_result_async() self._get_result_future.add_done_callback(self.get_result_callback) def get_result_callback(self, future): result = future.result().result self.get_logger().info(&#39;Result: {0}&#39;.format(result.sequence)) rclpy.shutdown() def feedback_callback(self, feedback_msg): feedback = feedback_msg.feedback self.get_logger().info(&#39;Received feedback: {0}&#39;.format(feedback.partial_sequence)) def main(args=None): rclpy.init(args=args) action_client = FibonacciActionClient() action_client.send_goal(10) rclpy.spin(action_client) if __name__ == &#39;__main__&#39;: main() Hugo和PaperMod 为什么选择Hugo和PaperMod？ 阿里云OSS 尝试过Hugo配合GitHub Pages来建站，...</p>
+            <p>起 为什么要搭建个人博客？(因为闲)
+就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。
+我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。
+虽然很多很多Hugo网站搭配Github Pages做到0成本白嫖，但是白嫖往往意味着花时间且不方便(Github Pages的访问和构建慢到离谱)，花点小钱才是最省力的。
+Hugo和PaperMod Hugo的官网上写着“The world’s fastest framework for building websites”，事实也确实如此。
+在准备搭建个人博客之后，我的第一选择是流传度最广的Hexo，它有着丰富的主题和中文互联网齐全的教程。
+我喜欢简洁、大方但不简陋的主题，于是筛选了各大论坛、教程推荐的主题，整理了它们各自的demo如下。
+蚊BloG https://mozz.ie/ ChrAlpha’s Blog https://blog.ichr.me/ 闪烁之狐 http://blinkfox.com/ Hugo Theme Stack Starter https://demo.stack.jimmycai.com/ Hexo Theme Fluid https://hexo.fluid-dev.com/ TransitiveBullsh.it https://transitivebullsh.it/ 首页 | Sukka’s Blog https://blog.skk.moe/ Yi’s Knowledge Base - Yi’s Knowledge Base https://www.y1zhou.com/ Frytea https://www.frytea.com/
+让我很惊讶的是里面居然有一半都是Hugo的主题，并且与hexo的主题放在一起打开，他们有着明显的速度差异。Hugo的网站打开特别快，相比之下，Hexo很多图片都不能完整呈现。
+其次就是Frytea的网站打开特别地惊艳，完美符合我对个人网站的想象，也了解到了PaperMod这款主题。
+准备工作 阿里云OSS 阿里云对象存储OSS的开通
+创建存储空间
+申请域名 阿里云域名注册流程
+搭建网站 安装Hugo 安装PaperMod 网站发布 结语 搭建个人网站≈“折腾”</p>
         </div>
         <footer class="entry-footer">
 
@@ -143,11 +146,12 @@
 
 
 
-<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;219字&nbsp;&nbsp;时长: 2分钟&nbsp;&nbsp;LYOUL</footer>
+
+<span title='2023-01-30 20:55:28 +0800 CST'>2023-01-30</span>&nbsp;&nbsp;字数:&nbsp;64字&nbsp;&nbsp;时长: 1分钟&nbsp;&nbsp;LYOUL</footer>
     </div>   
 <figure class="entry-cover"><img loading="lazy" src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" alt="">
 </figure>
-    <a class="entry-link" aria-label="post link to Hugo&#43;PaperMod&#43;阿里云OSS搭建网站" href="https://lyoul.top/posts/hugopapermodoss/"></a>
+    <a class="entry-link" aria-label="post link to 个人博客搭建历程" href="https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/"></a>
 </article>
     </main>
     

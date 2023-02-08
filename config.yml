@@ -7,15 +7,12 @@ theme: PaperMod
 
 enableInlineShortcodes: true
 enableEmoji: true # 允许使用 Emoji 表情，建议 true
-enableRobotsTXT: true # 允许爬虫抓取到搜索引擎，建议 true
+enableRobotsTXT: false # 允许爬虫抓取到搜索引擎，建议 true
 hasCJKLanguage: false # 自动检测是否包含 中文日文韩文 如果文章中使用了很多中文引号的话可以开启
 
 buildDrafts: true
 buildFuture: false
 buildExpired: false
-
-googleAnalytics:  # 谷歌统计
-# Copyright: LYOUL # 版权
 
 paginate: 5    # 首页每页显示的文章数
 summaryLength: 140 # 文章概览的自字数，默认70
@@ -52,7 +49,7 @@ params:
     ShowBreadCrumbs: true #在单个帖子/页面上方显示面包屑导航
     ShowCodeCopyButtons: true
     ShowWordCount: true
-    ShowRssButtonInSectionTermList: true
+    ShowRssButtonInSectionTermList: false
     hideFooter: false # 隐藏页脚
     ShowLastMod: false #显示文章更新时间
     ShowToc: true # 显示目录
@@ -64,7 +61,6 @@ params:
     comments: false
     hidemeta: false
     hideSummary: false #	隐藏列表页面中显示的摘要
-    
     # 静态资源
     assets:
         disableHLJS: false # 禁用 Highlight.js 加载
@@ -93,8 +89,8 @@ params:
         buttons:
             -   name: ✏️文章
                 url: posts/
-            -   name: 📚阅读
-                url: read/
+            #-   name: 📚阅读
+            #    url: read/
 
     # 社交图标
     socialIcons:
@@ -106,13 +102,13 @@ params:
             url: "https://t.me/L_Y_O_U_L"
 
     #站点验证标签
-    analytics:
-        google:
-            SiteVerificationTag: "XYZabc"
-        bing:
-            SiteVerificationTag: "XYZabc"
-        yandex:
-            SiteVerificationTag: "XYZabc"
+#    analytics:
+#        google:
+#            SiteVerificationTag: "XYZabc"
+#        bing:
+#            SiteVerificationTag: "XYZabc"
+#        yandex:
+#            SiteVerificationTag: "XYZabc"
 
     #文章封面
     cover:
@@ -161,7 +157,7 @@ menu:
 outputs:
     home:
         - HTML
-        - RSS
+        #- RSS
         - JSON # is necessary
 
 sitemap:
