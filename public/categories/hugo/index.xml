@@ -13,10 +13,10 @@
     <lastBuildDate>Mon, 30 Jan 2023 20:55:28 +0800</lastBuildDate><atom:link href="https://lyoul.top/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>个人博客搭建历程</title>
-      <link>https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</link>
+      <link>https://lyoul.top/posts/hugopapermodoss/</link>
       <pubDate>Mon, 30 Jan 2023 20:55:28 +0800</pubDate>
       
-      <guid>https://lyoul.top/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8E%86%E7%A8%8B/</guid>
+      <guid>https://lyoul.top/posts/hugopapermodoss/</guid>
       <description>起 为什么要搭建个人博客？(因为闲)
 就是想有一个地方可以写一写自己网上冲浪的经验和历程吧，同时这是属于自己的地方，不必受他人的干扰。
 我的网站选择了Hugo(PaperMod主题)和阿里云对象存储的结构，没有选择传统的WordPress、Typecho有后端的个人网站，因为云服务器实在是太贵了。阿里云的对象存储一年才9块钱还能顺便当图床用，想折腾的搞个域名，我的(.top)一年也才29，加起来一年不超过50块。
