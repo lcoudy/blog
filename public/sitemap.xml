@@ -2,18 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lyoul.top/posts/search/</loc>
-    <lastmod>2023-02-09T16:52:51+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://lyoul.top/posts/</loc>
-    <lastmod>2023-02-09T16:52:51+08:00</lastmod>
+    <lastmod>2023-02-09T17:55:30+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://lyoul.top/</loc>
-    <lastmod>2023-02-09T16:52:51+08:00</lastmod>
+    <lastmod>2023-02-09T17:55:30+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lyoul.top/posts/serchingjump/</loc>
+    <lastmod>2023-02-09T17:55:30+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lyoul.top/posts/serchmethod/</loc>
+    <lastmod>2023-02-09T17:55:23+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
