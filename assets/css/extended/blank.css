@@ -78,3 +78,10 @@ img:active {
     padding: unset;
 }
 
+
+/*页面宽度*/
+:root {
+    --gap: 36px;
+    --nav-width: 1400px;
+    --main-width: 900px;
+}
